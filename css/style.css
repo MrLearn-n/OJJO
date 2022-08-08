@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url("../font/Gilroy-UltraLight.ttf") format('ttf');
+    src: url("../font/Gilroy-UltraLight.woff") format('woff');
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url("../font/Gilroy-Light.ttf");
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Gilroy';
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+header {
+    background: url('../imgs/bgc.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.content { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+}
+
+.item-list {
+    font-weight: 400;
+    line-height: 21px;
+    list-style-type: none;
+    margin-left: 40px;
+}
+
+.item-list:first-child {
+    margin-left: 0px;
+}
+
+.head {
+    padding: 25px 0px;
+} 
+
+.account.item-list:last-child {
+    margin-left: 25px;
+} 
+
+.banner__text {
+    padding: 498px 0px 80px 0px;
+    border-bottom:  1px solid #FFFFFF;
+}
+
+.text {
+    max-width: 730px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.banner__text__title {
+    font-size: 36px;
+    line-height: 49px;
+    margin-bottom: 50px;
+}
+
+.banner__text__btn {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+    width: 27%;
+    text-transform: uppercase;
+    padding: 15px 35px;
+    background: #333333;
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+    margin:  0 auto;
+}
+
+.brand {
+    padding: 30px 0px;
+}
+
+.brand__column {
+    padding: 0px 15px;
+    border-left: 1px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;    
+}
+
+.brand__column:first-child {
+    padding: 0px 15px 0px 0px;
+    border-left: 0px;
+}
+
+.brand__column:last-child {
+    padding: 0px 0px 0px 15px;
+    border-right: 0px;
+}
+
