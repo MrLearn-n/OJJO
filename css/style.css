@@ -20,6 +20,7 @@ body {
     font-family: 'Gilroy';
     font-size: 14px;
     color: #FFFFFF;
+    background: #F9F9F9;
 }
 
 header {
@@ -49,6 +50,7 @@ h1 {
     font-weight: 400;
     line-height: 21px;
     list-style-type: none;
+    cursor: pointer;
     margin-left: 40px;
 }
 
@@ -59,6 +61,18 @@ h1 {
 .head {
     padding: 25px 0px;
 } 
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search::before {
+    content: url('../imgs/gridicons_search.svg');
+    width: 24px;
+    height: 24px;
+    margin-right: 13px;
+}
 
 .account.item-list:last-child {
     margin-left: 25px;
