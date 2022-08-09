@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url("../font/Gilroy-UltraLight.ttf") format('ttf');
+    src: url("../font/Gilroy-UltraLight.woff") format('woff');
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url("../font/Gilroy-Medium.woff");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url("../font/Gilroy-Bold.ttf");
+    font-weight: 600;
+}
+
+
+img {
+    width: 100%;
+}
+
+body {
+    font-family: 'Gilroy';
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+    background: #F9F9F9;
+}
+
+header {
+    background: #333333;
+    background-size: cover;
+    background-position: center center;
+}
+
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.content { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40.86px;
+}
+
+.sb_title {
+    font-size: 21px;
+    line-height: 29px;
+    margin-bottom: 15px;
+}
+
+.item-list {
+    font-weight: 400;
+    line-height: 21px;
+    list-style-type: none;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+.item-list:first-child {
+    margin-left: 0px;
+}
+
+.link-text {
+    text-align: center;
+    color: #333333;
+    margin:  0 auto;
+}
+
+.head {
+    padding: 25px 0px;
+} 
+
+.btn {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search::before {
+    content: url('../imgs/gridicons_search.svg');
+    width: 24px;
+    height: 24px;
+    margin-right: 13px;
+}
+
+.account.item-list:last-child {
+    margin-left: 25px;
+} 
