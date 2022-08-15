@@ -5,8 +5,8 @@
 
 @font-face {
     font-family: 'Gilroy';
-    src: url("../font/Gilroy-UltraLight.ttf") format('ttf');
-    src: url("../font/Gilroy-UltraLight.woff") format('woff');
+    src: url("../font/Gilroy-Regular.ttf") format('ttf');
+    src: url("../font/Gilroy-Regular.woff") format('woff');
 }
 
 @font-face {
@@ -86,13 +86,15 @@ h1 {
 }
 
 .button {
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto;
     cursor: pointer;
 }
 
 .btn {
     font-size: 18px;
     text-transform: uppercase;
-    font-weight: 500;
     color: #fff;
 }
 
@@ -119,17 +121,22 @@ h1 {
     grid-template-columns: 160px 160px 160px 160px 160px 160px;
 }
 
-.catalog-list > p {
-    font-size: 16px;
-    line-height: 24px;
+.catalog-list > a {
     text-align: left;
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     padding-bottom: 10px;
     border-bottom: 1px solid #D6D6D6;
 }
 
-.catalog-list > p::after {
+.catalog__txt {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.catalog-list > a::after {
     content: url('../imgs/arrow-select.svg');
     display: block;
     width: 12px;
@@ -162,21 +169,26 @@ h1 {
 }
 
 .catalog__row__btn {
-    box-sizing: border-box;
     max-width: 125px;
-    text-align: center;
     padding: 10px 20px;
     background: #333333;
-    margin:  0 auto;
 }
 
-.catalog__column-btn {
+.catalog__row__btn > a {
+    font-weight: 400;
+    line-height: 20.88px;
+}
+
+.catalog__column__btn {
     max-width: 227px;
+    letter-spacing: 0.1em;
     padding: 15px 35px;
-    box-sizing: border-box;
-    text-align: center;
     background: #333333;
-    margin: 0 auto;
+}
+
+.catalog__column__btn > a {
+    font-weight: 500;
+    line-height: 21.19px;
 }
 
 .seo {
@@ -194,9 +206,7 @@ h1 {
 }
 
 .seo_txt {
-    font-size: 16px;
     color: #000;
-    line-height: 24px;
 }
 
 .icon__list {
@@ -247,6 +257,8 @@ h1 {
 }
 
 .subscribe__list.item-list{
+    font-size: 18px;
+    line-height: 25.2px;
     margin: 15px 0px 0px 0px;
     display: flex;
     align-items: center;
@@ -301,7 +313,6 @@ h1 {
     font-size: 14px;
     font-weight: 500;
     line-height: 16px;
-    text-align: center;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     border: 1px solid #333333;

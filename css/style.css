@@ -5,8 +5,8 @@
 
 @font-face {
     font-family: 'Gilroy';
-    src: url("../font/Gilroy-UltraLight.ttf") format('ttf');
-    src: url("../font/Gilroy-UltraLight.woff") format('woff');
+    src: url("../font/Gilroy-Regular.ttf") format('ttf');
+    src: url("../font/Gilroy-Regular.woff") format('woff');
 }
 
 @font-face {
@@ -340,6 +340,8 @@ h1 {
 }
 
 .subscribe__list.item-list{
+    font-size: 18px;
+    line-height: 25.2px;
     margin: 15px 0px 0px 0px;
     display: flex;
     align-items: center;
