@@ -100,6 +100,9 @@ h3 {
 }
 
 .button {
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto;
     cursor: pointer;
 }
 
@@ -138,6 +141,10 @@ h3 {
     max-width: 478px;
     padding: 60px 0px 51px 0px;
     margin: 0 auto;
+}
+
+.product-link-item.content {
+    align-items: baseline;
 }
 
 .product.item-list {
@@ -297,6 +304,71 @@ h3 {
 
 .icon__item > p {
     margin-top: 15px;
+}
+
+.catalog-list > a {
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #D6D6D6;
+}
+
+.catalog__txt {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.catalog-list > a::after {
+    content: url('../imgs/arrow-select.svg');
+    display: block;
+    width: 12px;
+    height: 10px;
+}
+
+.catalog-column {
+    padding: 60px 0px 120px 0px;
+}
+
+.catalog__row {
+    padding: 35px;
+}
+
+.catalog__row__text {
+    text-align: center;
+    margin: 25px 0px 15px 0px;
+}
+
+.catalog__product-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 34px;
+    margin-top: 10px;
+}
+
+.catalog__row__btn {
+    max-width: 125px;
+    padding: 10px 20px;
+    background: #333333;
+}
+
+.catalog__row__btn > a {
+    font-weight: 400;
+    line-height: 20.88px;
+}
+
+.catalog__column__btn {
+    max-width: 227px;
+    letter-spacing: 0.1em;
+    padding: 15px 35px;
+    background: #333333;
+}
+
+.catalog__column__btn > a {
+    font-weight: 500;
+    line-height: 21.19px;
 }
 
 .subscribe {
