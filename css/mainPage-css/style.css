@@ -5,24 +5,25 @@
 
 @font-face {
     font-family: 'Gilroy';
-    src: url("../font/Gilroy-Regular.ttf") format('ttf');
-    src: url("../font/Gilroy-Regular.woff") format('woff');
+    src: url("../../font/Gilroy-Regular.ttf") format('ttf');
+    src: url("../../font/Gilroy-Regular.woff") format('woff');
 }
 
 @font-face {
     font-family: 'Gilroy';
-    src: url("../font/Gilroy-Medium.woff");
+    src: url("../../font/Gilroy-Medium.woff");
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'Gilroy';
-    src: url("../font/Gilroy-Bold.ttf");
+    src: url("../../font/Gilroy-Bold.ttf");
     font-weight: 600;
 }
 
 img {
     width: 100%;
+    height: 100%;
 }
 
 body {
@@ -34,7 +35,7 @@ body {
 }
 
 header {
-    background: url('../imgs/bgc.png');
+    background: url('../../imgs/bgc.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -43,6 +44,7 @@ header {
 .container {
     max-width: 1110px;
     margin: 0 auto;
+    padding: 0px 10px;
 }
 
 .content { 
@@ -69,6 +71,8 @@ h1 {
     line-height: 21px;
     list-style-type: none;
     cursor: pointer;
+    overflow: hidden;
+    position: relative;
     margin-left: 40px;
 }
 
@@ -87,7 +91,18 @@ h1 {
 } 
 
 .button {
+    text-align: center;
     cursor: pointer;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.button:hover {
+    background-color: #FFFFFF;
+    color: #333333;
+    border-color: #333333;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
 }
 
 .btn {
@@ -95,16 +110,48 @@ h1 {
     font-weight: 500;
 }
 
+.nav.item-list {
+    padding-bottom: 5px;
+}
+
+.nav.item-list::after {
+    content: url('');
+    width: 0%;
+    bottom: 0px;
+    height: 2px;
+    position: absolute;
+    background-color: #FFFFFF;
+    display: block;
+    transition: all 0.2s;
+}
+
+.nav.item-list:hover::after {
+    width: 100%;
+    transition: all 0.2s;
+}
+
 .search {
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.search > input {
+    display: none;
+    width: 50%;
+    margin-left: 15px;
+    border-radius: 15px;
 }
 
 .search::before {
-    content: url('../imgs/gridicons_search.svg');
+    content: url('../../imgs/gridicons_search.svg');
     width: 24px;
     height: 24px;
     margin-right: 13px;
+}
+
+.account.item-list:first-child {
+    padding-bottom: 6px;
 }
 
 .account.item-list:last-child {
@@ -132,11 +179,14 @@ h1 {
     font-size: 18px;
     line-height: 21px;
     letter-spacing: 0.1em;
-    width: 27%;
-    padding: 15px 35px;
+    max-width: 261px;
+    padding: 15px 34px;
     background: #333333;
     border: 1px solid #FFFFFF;
     margin:  0 auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .brand {
@@ -179,16 +229,13 @@ h1 {
     margin-top: 60px;
 }
 
-.product__slider__btns  {
-    display: grid;
-    grid-template-columns: 165px 171px 171px 171px 171px 171px;
-}
-
 .slider__btn {
     text-align: center;
     padding: 19px 36px 19px 35px;
     background-color: #333333;
-    border: 1px solid #333333;
+    border: 1px solid #FFFFFF;
+    display: flex;
+    justify-content: center;
 }
 
 .slider__btn > a {
@@ -213,6 +260,23 @@ h1 {
     justify-content: center;
 }
 
+.slider__column::after {
+    content: url('');
+    position: absolute;
+    background-color: #333333;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    z-index: 0;
+}
+
+.slider__column:hover::after {
+    opacity: 0.5;
+}
+
 .slider__column > p {
     position: absolute;
     bottom: 30px;
@@ -222,10 +286,11 @@ h1 {
     text-align: center;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    z-index: 1;
 }
 
 .our-salon{
-    background-image: url('../imgs/our-salon.png');
+    background-image: url('../../imgs/our-salon.png');
     background-size: cover;
     background-position: center center;
 }
@@ -247,16 +312,27 @@ h1 {
     max-width: 231px;
     margin: 0 auto;
     padding: 14px 34px;
+    color: #333333;
     border: 1px solid #FFFFFF;
     background-color: #FFFFFF;
     box-sizing: border-box;
+    cursor: pointer;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.our-salon__text__btn:hover {
+    color: #fff;
+    border-color: #333333;
+    background-color: #333333;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
 }
 
 .our-salon__text__btn > a {
     font-weight: 500;
     font-size: 18px;
     line-height: 21px;
-    color: #333333;
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
@@ -271,10 +347,22 @@ h1 {
     position: relative;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
-.blog__item-list:nth-child(2) {
-    margin: 0px 6px 0px 6px;
+.blog__item-list::after {
+    content: url('');
+    width: 100%;
+    height: 100%;
+    background-color: #333333;
+    position: absolute;
+    opacity: 0;
+    z-index: 0;
+    transition: 0.2s;
+}
+
+.blog__item-list:hover::after {
+    opacity: 0.5;
 }
 
 .blog__text {
@@ -288,6 +376,7 @@ h1 {
     color: #FFFFFF;
     position: absolute;
     bottom: 35px;
+    z-index: 1;
 }
 
 .blog__item-list:first-child > .blog__item-list__txt {
@@ -309,18 +398,79 @@ h1 {
 
 .gallery__collections__column:nth-child(1) {
     display: grid;
-    grid-template-columns: 555px 278px 277px;
-    grid-template-rows: 300px;
+    grid-template-areas: 
+            "video  video"
+            "img-a  img-b";
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 1fr 1fr;
+
 }
 
 .gallery__collections__column:nth-child(2) {
     display: grid;
-    grid-template-columns: 278px 277px 555px;
-    grid-template-rows: 300px;
+    grid-template-areas: 
+            "img-a  img-b"
+            "video  video";
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+video {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery__collections__row {
+    max-height: 300px;
+    position: relative;
+}
+
+.gallery__collections__row::after {
+    content: url('');
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    display: block;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.gallery__collections__row:hover::after {
+    opacity: 0.5;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.gallery__collections__row.item-a:nth-child(1) {
+    grid-area: video;
+}
+
+.gallery__collections__row.item-a:nth-child(2) {
+    grid-area: img-a;
+}
+
+.gallery__collections__row.item-a:nth-child(3) {
+    grid-area: img-b;
+}
+
+.gallery__collections__row.item-b:nth-child(1) {
+    grid-area: img-a;
+}
+
+.gallery__collections__row.item-b:nth-child(2) {
+    grid-area: img-b;
+}
+
+.gallery__collections__row.item-b:nth-child(3) {
+    grid-area: video;
 }
 
 .subscribe {
-    background-image: url('../imgs/our-salon.png');
+    background-image: url('../../imgs/our-salon.png');
     background-size: cover;
     background-position: center center;
 }
@@ -352,7 +502,7 @@ h1 {
 }
 
 .subscribe__list.item-list::before {
-    content: url('../imgs/subscribe__icon.svg');
+    content: url('../../imgs/subscribe__icon.svg');
     width: 17px;
     height: 17px;
     display: block;
@@ -388,6 +538,7 @@ h1 {
 
 .subscribe__form__btn {
     padding: 14px 25px;
+    border: 1px solid #fff;
     background-color: #333333;
     margin-left: 15px;
 }
@@ -398,7 +549,6 @@ h1 {
     text-align: center;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    border: 1px solid #333333;
 }
 
 .footer-column.content {
@@ -410,13 +560,14 @@ h1 {
     width: 255px;
 }
 
-.footer-row.title.item-list {
+.footer-row-title.item-list {
     font-weight: 500;
     font-size: 18px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     line-height: 25px;
     padding-bottom: 10px;
+    color: #333333;
     border-bottom: 1px solid #333333;
     margin: 0px 0px 30px 0px;
 }
@@ -428,12 +579,17 @@ h1 {
     align-items: center;
 } 
 
+.footer-row.item-list > p:hover::after {
+    width: 100%;
+    transition: all 0.2s;
+}
+
 .footer-row.item-list:nth-child(2) {
     margin-top: 0px;
 }
 
 .footer-row.item-list.phone::before {
-    content: url('../imgs/entypo_old-phone.svg');
+    content: url('../../imgs/entypo_old-phone.svg');
     width: 20px;
     height: 20px;
     display: block;
@@ -441,7 +597,7 @@ h1 {
 }
 
 .footer-row.item-list.e-mail::before {
-    content: url('../imgs/entypo_mail.svg');
+    content: url('../../imgs/entypo_mail.svg');
     width: 20px;
     height: 20px;
     display: block;

@@ -5,19 +5,19 @@
 
 @font-face {
     font-family: 'Gilroy';
-    src: url("../font/Gilroy-Regular.ttf") format('ttf');
-    src: url("../font/Gilroy-Regular.woff") format('woff');
+    src: url("../../font/Gilroy-Regular.ttf") format('ttf');
+    src: url("../../font/Gilroy-Regular.woff") format('woff');
 }
 
 @font-face {
     font-family: 'Gilroy';
-    src: url("../font/Gilroy-Medium.woff");
+    src: url("../../font/Gilroy-Medium.woff");
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'Gilroy';
-    src: url("../font/Gilroy-Bold.ttf");
+    src: url("../../font/Gilroy-Bold.ttf");
     font-weight: 600;
 }
 
@@ -86,6 +86,8 @@ h3 {
     line-height: 21px;
     list-style-type: none;
     cursor: pointer;
+    overflow: hidden;
+    position: relative;
     margin-left: 40px;
 }
 
@@ -112,18 +114,50 @@ h3 {
     font-weight: 500;
 }
 
+.nav.item-list {
+    padding-bottom: 5px;
+}
+
+.nav.item-list::after {
+    content: url('');
+    width: 0%;
+    bottom: 0px;
+    height: 2px;
+    position: absolute;
+    background-color: #FFFFFF;
+    display: block;
+    transition: all 0.2s;
+}
+
+.nav.item-list:hover::after {
+    width: 100%;
+    transition: all 0.2s;
+}
+
 /* <<<<HEADER>>>> */
 
 .search {
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.search > input {
+    display: none;
+    width: 50%;
+    margin-left: 15px;
+    border-radius: 15px;
 }
 
 .search::before {
-    content: url('../imgs/gridicons_search.svg');
+    content: url('../../imgs/gridicons_search.svg');
     width: 24px;
     height: 24px;
     margin-right: 13px;
+}
+
+.account.item-list:first-child {
+    padding-bottom: 6px;
 }
 
 .account.item-list:last-child {
@@ -180,17 +214,17 @@ h3 {
 }
 
 .contact__row.item-list.location::before {
-    content: url("../imgs/gridicons_location.svg");
+    content: url("../../imgs/gridicons_location.svg");
     margin-right: 10px;
 }
 
 .contact__row.item-list.phone::before {
-    content: url("../imgs/carbon_phone-filled.svg");
+    content: url("../../imgs/carbon_phone-filled.svg");
     margin-right: 10px;
 }
 
 .contact__row.item-list.mail::before {
-    content: url("../imgs/foundation_mail.svg");
+    content: url("../../imgs/foundation_mail.svg");
     margin-right: 10px;
 }
 
@@ -240,7 +274,7 @@ h3 {
 }
 
 .footer-row.item-list.phone::before {
-    content: url('../imgs/entypo_old-phone.svg');
+    content: url('../../imgs/entypo_old-phone.svg');
     width: 20px;
     height: 20px;
     display: block;
@@ -248,7 +282,7 @@ h3 {
 }
 
 .footer-row.item-list.e-mail::before {
-    content: url('../imgs/entypo_mail.svg');
+    content: url('../../imgs/entypo_mail.svg');
     width: 20px;
     height: 20px;
     display: block;
