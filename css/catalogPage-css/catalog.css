@@ -40,7 +40,7 @@ header {
 }
 
 .container {
-    max-width: 1110px;
+    max-width: 1155px;
     margin: 0 auto;
     padding: 0px 10px;
 }
@@ -111,10 +111,6 @@ h1 {
     text-transform: uppercase;
 }
 
-.nav.item-list {
-    padding-bottom: 5px;
-}
-
 .nav.item-list::after {
     content: url('');
     width: 0%;
@@ -153,25 +149,69 @@ h1 {
     margin-right: 13px;
 }
 
-.account.item-list:first-child {
-    padding-bottom: 6px;
-}
-
-.account.item-list:last-child {
-    margin-left: 25px;
+.account__item.content > .account.item-list {
+    margin: 0px 37px 0px 0px;
 } 
 
+.account__item.content > .nav.item-list:nth-child(2) {
+    margin: 0px 40px 0px 0px;
+}
+
+.account__item.content > .nav.item-list:nth-child(3) {
+    margin: 0px 24px 0px 0px;
+}
+
+.account__item.content > .nav.item-list:nth-child(4) {
+    margin: 0px 43px 0px 0px;
+}
+
 .catalog-btns {
+    width: 97%;
     padding: 100px 0px 30px 0px;
     flex-wrap: wrap;
 }
 
-.catalog-list {
+.catalog-list-btn {
     width: 160px;
     margin: 0px 6px;
+    position: relative;
 }
 
-.catalog-list > a {
+.catalog-list-menu {
+    display: none;
+}
+
+.catalog-list-menu.active {
+    display: block;
+    max-width: 172px;
+    width: 100%;
+    position: absolute;
+    border: 1px solid #D6D6D6;
+    background-color: #F9F9F9;
+    z-index: 1;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.catalog-list-menu > ul {
+    padding: 24px 12px 24px 12px;
+    box-sizing: border-box;
+}
+
+.catalog-list-menu > ul > li:first-child {
+    margin-top: 0px;
+}
+
+.catalog-list-menu > ul > li {
+    list-style-type: none;
+    margin-top: 12px;
+}
+
+.catalog-list-menu > ul > li > label {
+    margin-left: 12px;
+    text-align: left;
+}
+
+.catalog-list-btn > a {
     text-align: left;
     cursor: pointer;
     display: flex;
@@ -186,7 +226,7 @@ h1 {
     line-height: 24px;
 }
 
-.catalog-list > a::after {
+.catalog-list-btn > a::after {
     content: url('../../imgs/arrow-select.svg');
     display: block;
     width: 12px;
@@ -194,7 +234,8 @@ h1 {
 }
 
 .catalog-column {
-    padding: 60px 0px 60px 0px;
+    padding: 68px 0px 56px 0px;
+    width: 97%;
 }
 
 .catalog-column:first-child {
@@ -213,7 +254,7 @@ h1 {
 .catalog__row__img::after {
     content: url('');
     width: 100%;    
-    height: 100%;
+    height: 97.5%;
     background-color:#000;
     position: absolute;
     top: 0px;
@@ -231,7 +272,7 @@ h1 {
 
 .catalog__row__text {
     text-align: center;
-    margin: 25px 0px 15px 0px;
+    margin: 18px 0px 15px 0px;
 }
 
 .catalog__product-title {
@@ -242,8 +283,8 @@ h1 {
 }
 
 .catalog__row__btn {
-    max-width: 125px;
-    padding: 10px 20px;
+    max-width: 85px;
+    padding: 8px 18px;
     background: #333333;
 }
 
@@ -253,9 +294,9 @@ h1 {
 }
 
 .catalog__column__btn {
-    max-width: 227px;
+    max-width: 156px;
     letter-spacing: 0.1em;
-    padding: 15px 35px;
+    padding: 14px 35px;
     background: #333333;
 }
 
@@ -278,8 +319,29 @@ h1 {
     max-width: 540px;
 }
 
-.seo_txt {
+
+.seo-text > p {
+    position: relative;
     color: #000;
+}
+
+.seo-text > p::after {
+    content: url('');
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(180deg, rgba(249, 249, 249, 0) -50%, #F9F9F9 32.29%);
+    width: 540px;
+    height: 192px;
+}
+
+.seo-text > .read-more__btn {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.seo-text > .read-more__btn > a {
+    text-decoration: underline dotted;
 }
 
 .icon__list {
@@ -339,8 +401,9 @@ h1 {
     margin-bottom: 60px;
 }
 
-.subscribe-box {
-    max-width: 773px;
+.subscribe-box.content {
+    max-width: 842px;
+    justify-content: start;
     margin: 0 auto;
 }
 
@@ -367,11 +430,12 @@ h1 {
 .subscribe__form {
     padding: 14px 12px 14px 15px;
     border: 1px solid #FFFFFF;
+    margin-left: 77px;
 }
 
 .subscribe__form__input {
     max-width: 374px;
-    padding: 20px 25px 20px 22px;
+    padding: 16px 37px 19px 9px;
     background-color: #FFFFFF;
 }
 
@@ -392,18 +456,20 @@ h1 {
 }
 
 .subscribe__form__btn {
-    padding: 14px 25px;
+    padding: 11px 34px;
     background-color: #333333;
-    margin-left: 15px;
+    margin-left: 29px;
 }
 
 .subscribe__form__btn > a {
     font-size: 14px;
     font-weight: 500;
     line-height: 16px;
+    text-align: center;
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
+
 
 .footer-column.content {
     align-items: flex-start;

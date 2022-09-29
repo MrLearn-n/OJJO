@@ -42,9 +42,8 @@ header {
 }
 
 .container {
-    max-width: 1110px;
+    max-width: 1155px;
     margin: 0 auto;
-    padding: 0px 10px;
 }
 
 .content { 
@@ -63,7 +62,7 @@ h1 {
 .sb_title {
     font-size: 21px;
     line-height: 29px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .item-list {
@@ -71,7 +70,6 @@ h1 {
     line-height: 21px;
     list-style-type: none;
     cursor: pointer;
-    overflow: hidden;
     position: relative;
     margin-left: 40px;
 }
@@ -87,7 +85,7 @@ h1 {
 }
 
 .head {
-    padding: 25px 0px;
+    padding: 27px 0px;
 } 
 
 .button {
@@ -110,15 +108,12 @@ h1 {
     font-weight: 500;
 }
 
-.nav.item-list {
-    padding-bottom: 5px;
-}
 
 .nav.item-list::after {
     content: url('');
     width: 0%;
-    bottom: 0px;
-    height: 2px;
+    bottom: -5px;
+    height: 1px;
     position: absolute;
     background-color: #FFFFFF;
     display: block;
@@ -130,33 +125,53 @@ h1 {
     transition: all 0.2s;
 }
 
+.account.item-list {
+    display: flex;
+}
+
+
 .search {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    position: relative;
+    margin-right: 42px;
 }
 
-.search > input {
-    display: none;
-    width: 50%;
-    margin-left: 15px;
-    border-radius: 15px;
+.seacrh-hover-btn > p {
+    display: flex;
+    align-items: center;
 }
 
-.search::before {
+
+.seacrh-hover-btn > p::before {
     content: url('../../imgs/gridicons_search.svg');
     width: 24px;
     height: 24px;
     margin-right: 13px;
+    display: block;
 }
 
-.account.item-list:first-child {
-    padding-bottom: 6px;
+.search-after-hover {
+    display: none;
 }
 
-.account.item-list:last-child {
-    margin-left: 25px;
-} 
+.search-after-hover.active {
+    display: block;
+}
+
+.account__item.content > .nav.item-list:nth-child(1) {
+    margin-right: 40px;
+}
+
+.account__item.content > .nav.item-list:nth-child(2) {
+    margin: 0px 24px 0px 0px;
+}
+
+.account__item.content > .nav.item-list:nth-child(3) {
+    margin: 0px 0px 0px 0px;
+}
 
 .banner__text {
     padding: 498px 0px 80px 0px;
@@ -179,7 +194,7 @@ h1 {
     font-size: 18px;
     line-height: 21px;
     letter-spacing: 0.1em;
-    max-width: 261px;
+    max-width: 265px;
     padding: 15px 34px;
     background: #333333;
     border: 1px solid #FFFFFF;
@@ -210,7 +225,7 @@ h1 {
 }
 
 .product {
-    padding: 100px 0px 120px 0px;
+    padding: 88px 0px 120px 0px;
 }
 
 .product__text {
@@ -230,34 +245,61 @@ h1 {
 }
 
 .slider__btn {
-    text-align: center;
-    padding: 19px 36px 19px 35px;
-    background-color: #333333;
-    border: 1px solid #FFFFFF;
-    display: flex;
-    justify-content: center;
-}
-
-.slider__btn > a {
     font-weight: 500;
     font-style: normal;
     font-size: 18px;
     line-height: 21px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    text-align: center;
+    color: #333;
+    padding: 19px 36px 19px 35px;
+    background-color: #fff;
+    border: 1px solid #D6D6D6;
+}
+
+.slider__btn:hover {
+    background-color: #333333;
+    border: 1px solid #FFFFFF;
+    color: #fff;
+}
+
+.slider__btn.active {
+    background-color: #333333;
+    border: 1px solid #D6D6D6;
+    color: #fff;
+}
+
+.slider.active {
+    display: block;
+    margin-top: 55px;
 }
 
 .slider {
-    margin-top: 55px;
-    display: grid;
-    grid-template-rows: 280px 280px;
-    row-gap: 30px;
+    display: none;
 }
+
+.slider__row.content {
+    justify-content: center;
+}
+
+.slider__row:last-child {
+    margin-top: 30px;
+}    
 
 .slider__column {
     position: relative;
     display: flex;
     justify-content: center;
+    margin: 0px 15px 0px 15px;
+}
+
+.slider__column:first-child {
+    margin-left: 0px;
+}
+
+.slider__column:last-child {
+    margin-right: 0px;
 }
 
 .slider__column::after {
@@ -341,6 +383,10 @@ h1 {
     padding: 120px 0px 60px 0px;
 }
 
+.blog__item.content {
+    width: 96%;
+}
+
 .blog__item-list {
     max-width: 350px;
     height: 370px;
@@ -394,6 +440,10 @@ h1 {
 .gallery__text {
     text-align: center;
     margin-bottom: 60px;
+}
+
+.gallery__collections.content {
+    justify-content: center;
 }
 
 .gallery__collections__column:nth-child(1) {
