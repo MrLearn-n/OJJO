@@ -211,7 +211,6 @@ h1 {
 .brand__column {
     padding: 0px 15px;
     border-left: 1px solid #FFFFFF;
-    border-right: 1px solid #FFFFFF;    
 }
 
 .brand__column:first-child {
@@ -371,7 +370,7 @@ h1 {
     transition: 0.5s;
 }
 
-.our-salon__text__btn > a {
+.button > a {
     font-weight: 500;
     font-size: 18px;
     line-height: 21px;
@@ -385,6 +384,16 @@ h1 {
 
 .blog__item.content {
     width: 96%;
+    margin-bottom: 60px;
+}
+
+.blog__btn {
+    max-width: 265px;
+    background-color: #333;
+    border: 1px solid #fff;
+    padding: 15px 35px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .blog__item-list {

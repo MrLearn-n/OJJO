@@ -5,6 +5,7 @@
     } 
 
     .blog__item.content {
+        width: 100%;
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -117,13 +118,16 @@
     }
 
     .slider__column:nth-child(2) {
-        margin: 15px 0px;
+        margin: 15px 0px 0px 0px;
     }
 
     .slider__row:last-child > .slider__column:nth-child(2) {
         margin-bottom: 0px;
     }
-    
+
+    .slider__row:last-child {
+        margin-top: 15px;
+      }
 }
 
 
