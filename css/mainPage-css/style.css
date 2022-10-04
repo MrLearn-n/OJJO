@@ -26,6 +26,12 @@ img {
     height: 100%;
 }
 
+video {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
 body {
     font-family: 'Gilroy';
     font-size: 14px;
@@ -59,6 +65,7 @@ h1 {
     line-height: 40.86px;
 }
 
+
 .sb_title {
     font-size: 21px;
     line-height: 29px;
@@ -72,6 +79,27 @@ h1 {
     cursor: pointer;
     position: relative;
     margin-left: 40px;
+}
+
+.item-list > a {
+    position: relative;
+}
+
+.item-list > a::after {
+    content: url('');
+    width: 0%;
+    bottom: -6px;
+    left: 0px;
+    height: 1px;
+    position: absolute;
+    background-color: #333;
+    transition: all 0.2s;
+    display: block;
+}
+
+.item-list > a:hover::after {
+    width: 100%;
+    transition: all 0.2s;
 }
 
 .item-list:first-child {
@@ -455,6 +483,23 @@ h1 {
     justify-content: center;
 }
 
+.gallery__collections__row.video {
+    display: flex;
+    justify-content: center;
+}
+
+
+.gallery__collections__row.video::before {
+    content: url('../../imgs/ant-design_play-circle-filled.svg');
+    width: 80px;
+    height: 80px;
+    display: block;
+    top: 30%;
+    z-index: 2;
+    cursor: pointer;
+    position: absolute;
+}
+
 .gallery__collections__column:nth-child(1) {
     display: grid;
     grid-template-areas: 
@@ -473,11 +518,6 @@ h1 {
     grid-template-rows: 50% 50%;
     grid-template-columns: 1fr 1fr;
 
-}
-
-video {
-    width: 100%;
-    height: 100%;
 }
 
 .gallery__collections__row {
@@ -548,12 +588,16 @@ video {
     margin: 0 auto;
 }
 
-.subscribe__list.item-list{
+.subscribe__list.item-list {
     font-size: 18px;
     line-height: 25.2px;
     margin: 15px 0px 0px 0px;
     display: flex;
     align-items: center;
+}
+
+.subscribe__list.item-list > a::after {
+    background-color: #D6D6D6;
 }
 
 .subscribe__list.item-list:first-child {
@@ -637,6 +681,10 @@ video {
     display: flex;
     align-items: center;
 } 
+
+.footer-row.item-list >  a {
+    position: relative;
+}
 
 .footer-row.item-list > p:hover::after {
     width: 100%;
