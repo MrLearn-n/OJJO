@@ -89,8 +89,30 @@ h3 {
     line-height: 21px;
     list-style-type: none;
     cursor: pointer;
+    color: #ffff;
     position: relative;
     margin-left: 40px;
+}
+
+.item-list > a {
+    position: relative;
+}
+
+.item-list > a::after {
+    content: url('');
+    width: 0%;
+    bottom: -6px;
+    left: 0px;
+    height: 1px;
+    position: absolute;
+    background-color: #333;
+    transition: all 0.2s;
+    display: block;
+}
+
+.item-list > a:hover::after {
+    width: 100%;
+    transition: all 0.2s;
 }
 
 .item-list:first-child {
@@ -119,8 +141,8 @@ h3 {
 .nav.item-list::after {
     content: url('');
     width: 0%;
-    bottom: 0px;
-    height: 2px;
+    bottom: -5px;
+    height: 1px;
     position: absolute;
     background-color: #FFFFFF;
     display: block;
@@ -138,39 +160,41 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    position: relative;
+    margin-right: 42px;
 }
 
-.search > input {
-    display: none;
-    width: 50%;
-    margin-left: 15px;
-    border-radius: 15px;
+.seacrh-hover-btn > p {
+    display: flex;
+    align-items: center;
+    color: #fff;
 }
 
-.search::before {
+
+.seacrh-hover-btn > p::before {
     content: url('../../imgs/gridicons_search.svg');
     width: 24px;
     height: 24px;
     margin-right: 13px;
+    display: block;
 }
 
-.account__item.content > .account.item-list {
-    margin: 0px 37px 0px 0px;
-} 
+.search-after-hover {
+    display: none;
+}
+
+.account__item.content > .nav.item-list:nth-child(1) {
+    margin-right: 40px;
+}
 
 .account__item.content > .nav.item-list:nth-child(2) {
-    margin: 0px 40px 0px 0px;
-}
-
-.account__item.content > .nav.item-list:nth-child(3) {
     margin: 0px 24px 0px 0px;
 }
 
-.account__item.content > .nav.item-list:nth-child(4) {
-    margin: 0px 43px 0px 0px;
+.account__item.content > .nav.item-list:nth-child(3) {
+    margin: 0px 0px 0px 0px;
 }
-
-
 
 /* <<<<MAIN>>>> */
     /* product-breadcrumbs */

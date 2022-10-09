@@ -185,10 +185,6 @@ h1 {
     display: none;
 }
 
-.search-after-hover.active {
-    display: block;
-}
-
 .account__item.content > .nav.item-list:nth-child(1) {
     margin-right: 40px;
 }
