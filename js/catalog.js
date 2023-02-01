@@ -8,7 +8,7 @@ let btnReadMore = document.querySelector('.read-more__btn');
 let readMore = document.querySelector('.seo-text');
 
 
-const activeHide = (btn, content) => {
+const showMore = (btn, content) => {
     btn.addEventListener('click', function() {
         if(!content.classList.contains('active')) {
             content.classList.add('active');
@@ -18,8 +18,8 @@ const activeHide = (btn, content) => {
     })
 }
 
-activeHide(btnMoreProduct, contentMoreProduct);
-activeHide(btnReadMore, readMore);
+showMore(btnMoreProduct, contentMoreProduct);
+showMore(btnReadMore, readMore);
 
 var i = 0;
 
