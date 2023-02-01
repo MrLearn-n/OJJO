@@ -21,14 +21,12 @@ const showMore = (btn, content) => {
 showMore(btnMoreProduct, contentMoreProduct);
 showMore(btnReadMore, readMore);
 
-var i = 0;
+
 
 catalogBtn.forEach(item => {
-    item.addEventListener('click', function(event) {
+    item.addEventListener('mouseover', function(event) {
         let target = event.target;
-        i++;
         showMenu(target.dataset.num);
-        hiddenMenu();
     })
 })
 
@@ -37,12 +35,14 @@ function showMenu (id) {
         item.classList.remove('active');
     })
     catalogMenu[id].classList.add('active');
-}
 
-function hiddenMenu () {
-    if( i % 2 == 0) {
-        catalogMenu.forEach(item => {
-            item.classList.remove('active');
-        })
-    }
+    catalogMenu[id].addEventListener('mouseover', function(event){
+        let target = event.target;
+        if(target) {
+            catalogMenu[id].classList.add('active');
+        }
+    })
+    catalogMenu[id].addEventListener('mouseout', function(){
+        catalogMenu[id].classList.remove('active');
+    })
 }
