@@ -190,7 +190,7 @@ h1 {
 }
 
 .catalog-btns {
-    width: 97%;
+    width: 100%;
     padding: 100px 0px 30px 0px;
     flex-wrap: wrap;
 }
@@ -205,9 +205,10 @@ h1 {
     display: none;
 }
 
+
 .catalog-list-menu.active {
     display: block;
-    max-width: 172px;
+    max-width: 255px;
     width: 100%;
     position: absolute;
     border: 1px solid #D6D6D6;
@@ -217,7 +218,7 @@ h1 {
 }
 
 .catalog-list-menu > ul {
-    padding: 24px 12px 24px 12px;
+    padding: 24px 52px 24px 30px;
     box-sizing: border-box;
 }
 
@@ -227,12 +228,42 @@ h1 {
 
 .catalog-list-menu > ul > li {
     list-style-type: none;
+    justify-content: start;
     margin-top: 12px;
 }
 
 .catalog-list-menu > ul > li > label {
     margin-left: 12px;
     text-align: left;
+}
+
+.catalog-list-menu > .btns-menu-item {
+    max-width: 200px;
+    padding: 10px 25px 10px 30px;
+    border-top: 1px solid #D6D6D6;;
+}
+
+.catalog-list-menu > .btns-menu-item  > .btns-menu-item {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btns-menu-item > .clear {
+    padding-bottom: 3px;
+    border-bottom: 1px dashed #000000;
+}
+
+.btns-menu-item > .show  {
+    background: #333333;
+    padding: 8px 12px;
+}
+
+.btns-menu-item > .show > a {
+    color: #fff;
 }
 
 .catalog-list-btn > a {
@@ -255,6 +286,12 @@ h1 {
     display: block;
     width: 12px;
     height: 10px;
+}
+
+.catalog-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .catalog-column {
