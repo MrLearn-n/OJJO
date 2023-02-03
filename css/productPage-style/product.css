@@ -52,7 +52,7 @@ header {
 }
 
 a {
-    color: #fff;
+    color: #333;
     text-decoration: none;
 }
 
@@ -150,6 +150,7 @@ h3 {
 }
 
 .btn {
+    color: #fff;
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 500;
@@ -238,7 +239,7 @@ h3 {
     position: relative;
 }
 
-.product.item-list.status::after {
+.product.item-list.status > a::after {
     content: url('');
     width: 100%;
     bottom: 0px;
@@ -249,7 +250,7 @@ h3 {
     transition: all 0.2s;
 }
 
-.product.item-list.status:hover::after {
+.product.item-list.status > a:hover::after {
     width: 0%;
     transition: all 0.2s;
 }
@@ -430,8 +431,8 @@ h3 {
 
 .seo-text > .read-more__btn > a {
     font-size: 18px;
-    line-height: 10px;
     color: #333;
+    line-height: 10px;
     letter-spacing: 0.1em;
     text-decoration: underline dotted;
 }
@@ -555,18 +556,6 @@ h3 {
     line-height: 20.88px;
 }
 
-.catalog__column__btn {
-    max-width: 227px;
-    letter-spacing: 0.1em;
-    padding: 15px 35px;
-    background: #333333;
-}
-
-.catalog__column__btn > a {
-    font-weight: 500;
-    line-height: 21.19px;
-}
-
 .subscribe {
     background-image: url('../../imgs/our-salon.png');
     background-size: cover;
@@ -594,6 +583,10 @@ h3 {
     margin: 15px 0px 0px 0px;
     display: flex;
     align-items: center;
+}
+
+.subscribe__list.item-list > a {
+    color: #fff;
 }
 
 .subscribe__list.item-list > a::after {
@@ -681,10 +674,6 @@ h3 {
     display: flex;
     align-items: center;
 } 
-
-.footer-row.item-list >  a {
-    color: #333;
-}
 
 .footer-row.item-list:nth-child(2) {
     margin-top: 0px;
