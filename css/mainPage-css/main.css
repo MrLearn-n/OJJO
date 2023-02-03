@@ -53,6 +53,11 @@ header {
     align-items: center;
 }
 
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
 h1 {
     font-family: 'Noto Serif', serif;
     font-weight: 700;
@@ -118,12 +123,24 @@ h1 {
     transition: 0.5s;
 }
 
+.button > a {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
 .button:hover {
     background-color: #FFFFFF;
     color: #333333;
     border-color: #333333;
     -webkit-transition: 0.5s;
     transition: 0.5s;
+}
+
+.button:hover > .btn {
+    color: #333;
 }
 
 .btn {
@@ -389,13 +406,15 @@ h1 {
     transition: 0.5s;
 }
 
-.button > a {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 21px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+.our-salon__text__btn > .btn {
+    color: #333;
 }
+
+.our-salon__text__btn:hover > .btn {
+    color: #fff;
+}
+
+/* blog */
 
 .blog {
     padding: 120px 0px 60px 0px;
@@ -680,12 +699,7 @@ h1 {
 } 
 
 .footer-row.item-list >  a {
-    position: relative;
-}
-
-.footer-row.item-list > p:hover::after {
-    width: 100%;
-    transition: all 0.2s;
+    color: #333;
 }
 
 .footer-row.item-list:nth-child(2) {
