@@ -51,6 +51,11 @@ header {
     align-items: center;
 }
 
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
 h1 {
     font-family: 'Noto Serif', serif;
     font-weight: 700;
@@ -124,6 +129,10 @@ h1 {
     border-color: #333333;
     -webkit-transition: 0.5s;
     transition: 0.5s;
+}
+
+.button:hover > .btn {
+    color: #333;
 }
 
 .btn {
@@ -279,6 +288,7 @@ h1 {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+    color: #333;
 }
 
 .catalog-list-btn > a::after {
@@ -418,6 +428,7 @@ h1 {
 
 .seo-text > .read-more__btn > a {
     text-decoration: underline dotted;
+    color: #333;
 }
 
 .icon__list {
@@ -573,11 +584,15 @@ h1 {
 }
 
 .footer-row.item-list {
-    color: #333333;
+    color: #333;
     margin: 15px 0px 0px 0px;
     display: flex;
     align-items: center;
 } 
+
+.footer-row.item-list > a {
+    color: #333;
+}
 
 .footer-row.item-list:nth-child(2) {
     margin-top: 0px;
