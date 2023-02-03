@@ -42,12 +42,18 @@ header {
 .container {
     max-width: 1155px;
     margin: 0 auto;
+    padding: 0px 10px 0px 10px;
 }
 
 .content { 
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
 }
 
 h1 {
@@ -219,8 +225,12 @@ h3 {
     color: #333333;
     margin-left: 0px;
 }
+
+.product.item-list > a {
+    position: relative;
+}
     
-.product.item-list.status::after {
+.product.item-list.status > a::after {
     content: url('');
     width: 100%;
     bottom: 0px;
@@ -231,7 +241,7 @@ h3 {
     transition: all 0.2s;
 }
 
-.product.item-list.status:hover::after {
+.product.item-list.status > a:hover::after {
     width: 0%;
     transition: all 0.2s;
 }
@@ -310,7 +320,7 @@ h3 {
 
     /* map */
 .img__map {
-    padding:60px 40px 36px 5px;
+    padding: 60px 0px 36px 0px;
 }
     /* map */
 /* <<<<MAIN>>>> */
@@ -344,6 +354,8 @@ h3 {
     display: flex;
     align-items: center;
 } 
+
+
 
 .footer-row.item-list:nth-child(2) {
     margin-top: 0px;
