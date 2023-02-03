@@ -196,6 +196,8 @@ h3 {
     margin: 0px 0px 0px 0px;
 }
 
+/* <<<<HEADER>>>> */
+
 /* <<<<MAIN>>>> */
     /* product-breadcrumbs */
 
@@ -218,8 +220,20 @@ h3 {
     margin-left: 0px;
 }
     
-.product.item-list.status {
-    text-decoration: underline;
+.product.item-list.status::after {
+    content: url('');
+    width: 100%;
+    bottom: 0px;
+    height: 1px;
+    position: absolute;
+    background-color: #333;
+    display: block;
+    transition: all 0.2s;
+}
+
+.product.item-list.status:hover::after {
+    width: 0%;
+    transition: all 0.2s;
 }
     
 .after-content::after {
@@ -231,11 +245,13 @@ h3 {
     color: #333333;
     margin: 0px 15px 0px 15px;
 }
+    /* product-breadcrumbs */
 
-.map-contact {
+    /* our-contacts */
+
+.contact {
     text-align: center;
 }
-
 
 .contact-body {
     padding: 30px 0px 59px 0px;
@@ -274,7 +290,6 @@ h3 {
     margin-right: 46px;
 }
 
-
 .contact__row.item-list.phone::before {
     content: url("../../imgs/carbon_phone-filled.svg");
     margin-right: 10px;
@@ -291,10 +306,14 @@ h3 {
     height: 20px;
     margin-right: 10px;
 }
+    /* our-contacts */
 
+    /* map */
 .img__map {
     padding:60px 40px 36px 5px;
 }
+    /* map */
+/* <<<<MAIN>>>> */
 
 /* <<<<FOOTER>>>> */
     /* footer-top */
@@ -364,14 +383,17 @@ h3 {
 
 .social-item-list {
     margin-left: 20px;
+    list-style-type: none;
 }
 
 .social-item-list:first-child {
     margin-left: 0px;
+    list-style-type: none
 }
 
-    /* footer-top */    /* footer-top */     /* footer-top */
-    /* footer-bot */    /* footer-bot */    /* footer-bot */
+    /* footer-top */
+
+    /* footer-bot */ 
     
 .footer-bot__text {
     padding: 15px 0px;
