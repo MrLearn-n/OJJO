@@ -726,6 +726,7 @@ h1 {
 
 .social-item-list {
     margin-left: 20px;
+    list-style-type: none;
 }
 
 .social-item-list:first-child {
