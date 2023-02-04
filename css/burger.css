@@ -2,6 +2,10 @@
     position: relative;
 }
 
+.burger-btn {
+    margin-left: 10px;
+}
+
 .burger-menu.active {
     display: block;
     position: absolute;
