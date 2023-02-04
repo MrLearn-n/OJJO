@@ -1,0 +1,55 @@
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    margin-right: 40px
+}
+
+.search.active {
+    margin-right: 0px
+}
+
+.search-after_click {
+    display: none;
+}
+
+.search-after_click.active {
+    width: 40%;
+    display: block;
+    margin: 0px 10px;
+}
+
+.seacrh-click-btn.active > p {
+    display: none;
+}
+
+.search-after_click > input {
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px;
+    border-color: #333;
+    background-color: #fff;
+    font-size: 0.75rem;
+}
+
+.seacrh-click-btn {
+    display: flex;
+}
+
+.seacrh-click-btn > p {
+    display: flex;
+    align-items: center;
+}
+
+
+.seacrh-click-btn > span::before {
+    content: url('../../imgs/gridicons_search.svg');
+    width: 24px;
+    height: 24px;
+    margin-right: 13px;
+    display: block;
+}
