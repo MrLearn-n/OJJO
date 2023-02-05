@@ -383,6 +383,9 @@ h1 {
 }
 
 .our-salon__text__btn > .btn {
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.1em;
     color: #333;
 }
 

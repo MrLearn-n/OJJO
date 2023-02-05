@@ -22,9 +22,6 @@
     margin: 0px 10px;
 }
 
-.seacrh-click-btn.active > p {
-    display: none;
-}
 
 .search-after_click > input {
     width: 100%;
@@ -36,6 +33,10 @@
     font-size: 0.75rem;
 }
 
+.seacrh-click-btn.active > p {
+    display: none;
+}
+
 .seacrh-click-btn {
     display: flex;
 }
@@ -43,6 +44,7 @@
 .seacrh-click-btn > p {
     display: flex;
     align-items: center;
+    color: #fff;
 }
 
 
