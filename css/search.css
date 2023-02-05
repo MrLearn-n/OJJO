@@ -53,3 +53,9 @@
     margin-right: 13px;
     display: block;
 }
+
+@media (max-width: 510px) {
+    .search {
+        display: none;
+    }
+}
