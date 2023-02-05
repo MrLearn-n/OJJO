@@ -49,7 +49,7 @@
 
 
 .seacrh-click-btn > span::before {
-    content: url('../../imgs/gridicons_search.svg');
+    content: url('./../../imgs/UI/search/gridicons_search.svg');
     width: 24px;
     height: 24px;
     margin-right: 13px;

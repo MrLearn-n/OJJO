@@ -258,7 +258,7 @@ h3 {
 }
 
 .contact__row.item-list.location::before {
-    content: url("../../imgs/gridicons_location.svg");
+    content: url("./../../imgs/UI/contact/gridicons_location.svg");
     margin-right: 10px;
 }
 
@@ -271,12 +271,12 @@ h3 {
 }
 
 .contact__row.item-list.phone::before {
-    content: url("../../imgs/carbon_phone-filled.svg");
+    content: url("./../../imgs/UI/contact/carbon_phone-filled.svg");
     margin-right: 10px;
 }
 
 .contact__row.item-list.mail::before {
-    content: url("../../imgs/foundation_mail.svg");
+    content: url("./../../imgs/UI/contact/foundation_mail.svg");
     margin-right: 10px;
 }
 
@@ -332,7 +332,7 @@ h3 {
 }
 
 .footer-row.item-list.phone::before {
-    content: url('../../imgs/entypo_old-phone.svg');
+    content: url('./../../imgs/UI/footer/entypo_old-phone.svg');
     width: 20px;
     height: 20px;
     display: block;
@@ -340,7 +340,7 @@ h3 {
 }
 
 .footer-row.item-list.e-mail::before {
-    content: url('../../imgs/entypo_mail.svg');
+    content: url('./../../imgs/UI/footer/entypo_mail.svg');
     width: 20px;
     height: 20px;
     display: block;

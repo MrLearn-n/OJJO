@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: 'Gilroy';
-    src: url("../../font/Gilroy-SemiBold.woff");
+    src: url("../../font/Gilroy-Bold.ttf");
     font-weight: 600;
 }
 
@@ -527,7 +527,7 @@ h3 {
 }
 
 .subscribe {
-    background-image: url('../../imgs/our-salon.png');
+    background-image: url('./../../imgs/UI/our-salon.png');
     background-size: cover;
     background-position: center center;
 }
@@ -566,7 +566,7 @@ h3 {
 }
 
 .subscribe__list.item-list::before {
-    content: url('../../imgs/subscribe__icon.svg');
+    content: url('./../../imgs/UI/subscribe/subscribe__icon.svg');
     width: 17px;
     height: 17px;
     display: block;
@@ -647,7 +647,7 @@ h3 {
 }
 
 .footer-row.item-list.phone::before {
-    content: url('../../imgs/entypo_old-phone.svg');
+    content: url('./../../imgs/UI/footer/entypo_old-phone.svg');
     width: 20px;
     height: 20px;
     display: block;
@@ -655,7 +655,7 @@ h3 {
 }
 
 .footer-row.item-list.e-mail::before {
-    content: url('../../imgs/entypo_mail.svg');
+    content: url('./../../imgs/UI/footer/entypo_mail.svg');
     width: 20px;
     height: 20px;
     display: block;
