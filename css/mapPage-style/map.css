@@ -5,12 +5,6 @@
 
 @font-face {
     font-family: 'Gilroy';
-    src: url("../../font/Gilroy-Regular.ttf") format('ttf');
-    src: url("../../font/Gilroy-Regular.woff") format('woff');
-}
-
-@font-face {
-    font-family: 'Gilroy';
     src: url("../../font/Gilroy-Medium.woff");
     font-weight: 500;
 }
@@ -144,6 +138,8 @@ h3 {
     font-weight: 500;
 }
 
+/* <<<<HEADER>>>> */
+
 .nav.item-list::after {
     content: url('');
     width: 0%;
@@ -160,34 +156,8 @@ h3 {
     transition: all 0.2s;
 }
 
-/* <<<<HEADER>>>> */
-
-.search {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-    margin-right: 42px;
-}
-
-.seacrh-hover-btn > p {
-    display: flex;
-    align-items: center;
-    color: #fff;
-}
-
-
-.seacrh-hover-btn > p::before {
-    content: url('../../imgs/gridicons_search.svg');
-    width: 24px;
-    height: 24px;
-    margin-right: 13px;
-    display: block;
-}
-
-.search-after-hover {
-    display: none;
+.logo {
+    padding: 0px 10px;
 }
 
 .account__item.content > .nav.item-list:nth-child(1) {
