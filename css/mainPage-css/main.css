@@ -165,36 +165,12 @@ h1 {
     transition: all 0.2s;
 }
 
+.logo {
+    padding: 0px 10px;
+}
+
 .account.item-list {
     display: flex;
-}
-
-
-.search {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-    margin-right: 42px;
-}
-
-.seacrh-hover-btn > p {
-    display: flex;
-    align-items: center;
-}
-
-
-.seacrh-hover-btn > p::before {
-    content: url('../../imgs/gridicons_search.svg');
-    width: 24px;
-    height: 24px;
-    margin-right: 13px;
-    display: block;
-}
-
-.search-after-hover {
-    display: none;
 }
 
 .account__item.content > .nav.item-list:nth-child(1) {
