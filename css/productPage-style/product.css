@@ -174,35 +174,6 @@ h3 {
     transition: all 0.2s;
 }
 
-
-.search {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-    margin-right: 42px;
-}
-
-.seacrh-hover-btn > p {
-    display: flex;
-    align-items: center;
-    color: #fff;
-}
-
-
-.seacrh-hover-btn > p::before {
-    content: url('../../imgs/gridicons_search.svg');
-    width: 24px;
-    height: 24px;
-    margin-right: 13px;
-    display: block;
-}
-
-.search-after-hover {
-    display: none;
-}
-
 .account__item.content > .nav.item-list:nth-child(1) {
     margin-right: 40px;
 }
@@ -571,12 +542,10 @@ h3 {
     margin-bottom: 50px;
 }
 
-.subscribe-box.content {
-    max-width: 842px;
-    justify-content: start;
+.subscribe-box {
+    max-width: 773px;
     margin: 0 auto;
 }
-
 .subscribe__list.item-list {
     font-size: 18px;
     line-height: 25.2px;
@@ -608,12 +577,11 @@ h3 {
 .subscribe__form {
     padding: 14px 12px 14px 15px;
     border: 1px solid #FFFFFF;
-    margin-left: 77px;
 }
 
 .subscribe__form__input {
     max-width: 374px;
-    padding: 16px 37px 19px 9px;
+    padding: 20px 25px 20px 22px;
     background-color: #FFFFFF;
 }
 
